@@ -44,4 +44,4 @@ jobs:
       - store_artifacts:
           destination: $CIRCLE_ARTIFACTS/
           path: target/*.war
-         
+
