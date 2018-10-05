@@ -38,9 +38,14 @@ jobs:
         
       # run tests!
       #- run: mvn integration-test
+      - persist_to_workspace:
+            root: /tmp/workspace
+            paths:
+              - target/application.jar
+              - build/*
 
       - run: mvn package
       - store_artifacts:
-           path: /*.war 
+           path: /tmp/workspace/build/*.war 
            destination: $CIRCLE_ARTIFACTS/
 
