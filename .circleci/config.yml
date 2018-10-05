@@ -42,6 +42,6 @@ jobs:
 
       - run: mvn package
       - store_artifacts:
-           path: target/*.war 
+           path: *.war 
            destination: $CIRCLE_ARTIFACTS/
 
