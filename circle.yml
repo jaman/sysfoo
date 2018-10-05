@@ -1,7 +1,6 @@
-jobs:
-  build:
-    override:
-      - mvn package
+test:
+  override:
+    - mvn package
 
-    post:
-      - mv target/*.war $CIRCLE_ARTIFACTS/
+  post:
+    - mv target/*.war $CIRCLE_ARTIFACTS/
